@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB2</title>
+</head>
+<body>
+    <a>С помощью команды telnet 192.168.199.8 80 подключаемся к учебному серверу, предварительно подключившись через putty к kubsu-dev.ru</a><br>
+    <img src = 'imag.png'><img src = 'image copy.png'><br>
+    <a>Отправляем GET запрос для получения главной страницы сайта</a><br>
+    <a>С помощью команды GET также получаем внутреннюю страницу сайта. Для этого указываем ее URI после GET/</a><br>
+    <a>и указываем значение заголовка Host: u68871.kubsu-dev.ru</a><br>
+    <img src = 'image copy 2.png'><br>
+    <a>С помощью FileZilla заливаем file.tr.gz в каталог задания на сервере</a><br>
+    <img src = 'image copy 3.png'><br>
+    <a>После этого, чтобы определить размер файла, не скачивая его, используем мeтод HEAD</a><br>
+    <img src = 'image copy 4.png'><br>
+    <a>На размер файла в байтах указывает значение заголовка Content-Length - в данном случае 11335</a><br>
+    <a>Определяем медиатип ресурса image.png так же с помощью метода HEAD, предварительно загрузив image.png на сервер через FileZilla</a><br>
+    <img src = 'image copy 5.png'><img src = 'image copy 6.png'><br>
+    <a>На медиатип указывает значение заголовка Content-Type - в данном случае image</a><br>
+    <a>Отправляем комментарий на сервер по адресу /index.php, предварительно загрузив index.php на сервер через FileZilla (убеждаемся в работоспособности index.php),</a><br>
+    <a>при помощи метода POST. Указываем заголовки Content-Type: application/x-www-form-urlencoded, и Content-Length: 30 для корректной передачи данных</a><br>
+    <img src = 'image copy 7.png'><img src = 'image copy 8.png'><img src = 'image copy 10.png'><br>
+    <a>Для того, чтобы получить первые 100 байт файла, создаем GET запрос и указываем заголовок Range: bytes=0-99</a><br>
+    <img src = 'image copy 11.png'><br>
+    <a>Определяем кодировку ресурса index.php благодаря отправке запроса HEAD. На формат кодировки указывает значение параметра charset заголовка Content-Type</a><br>
+    <a>В данном случае тип кодировки - UTF-8</a><br>
+    <img src = 'image copy 12.png'>
+</body>
+</html>
